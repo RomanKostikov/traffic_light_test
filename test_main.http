@@ -1,0 +1,35 @@
+# Test your FastAPI endpoints
+
+### Получение списка светофоров:
+
+GET http://localhost:8000/trafficlights
+
+### Обновление состояния светофора:
+
+PUT http://localhost:8000/trafficlights/2
+Content-Type: application/json
+
+{
+  "id": 2,
+  "state": "green",
+  "pedestrian_queue": 0,
+  "vehicle_queue": 0
+}
+
+### Обновление очереди пешеходов для светофора:
+
+PUT http://localhost:8000/trafficlights/2/pedestrianQueue?size=5
+Content-Type: application/json
+
+{
+  "size": 5
+}
+
+### Обновление очереди автомобилей для светофора:
+
+PUT http://localhost:8000/trafficlights/1/vehicleQueue?size=1
+Content-Type: application/json
+
+{
+  "size": 1
+}
