@@ -45,9 +45,12 @@ pip install -r requirements.txt
 - Запустите сервер и отправьте запросы, например:
 
 1. Получение списка светофоров:
+```
 GET http://localhost:8000/trafficlights
+```
 
 2. Обновление состояния светофора:
+```
 PUT http://localhost:8000/trafficlights/1
 Content-Type: application/json
 
@@ -57,22 +60,27 @@ Content-Type: application/json
   "pedestrian_queue": 0,
   "vehicle_queue": 0
 }
+```
 
 3. Обновление очереди пешеходов для светофора:
+```
 PUT http://localhost:8000/trafficlights/1/pedestrianQueue?size=5
 Content-Type: application/json
 
 {
   "size": 5
 }
+```
 
-4. PUT http://localhost:8000/trafficlights/1/vehicleQueue?size=10
+4. Обновление очереди автомобилей для светофора:
+```
+PUT http://localhost:8000/trafficlights/1/vehicleQueue?size=10
 Content-Type: application/json
 
 {
   "size": 10
 }
-
+```
 Вы также можете использовать другие методы HTTP, такие как DELETE и PATCH, чтобы удалить или частично обновить 
 светофоры.
 
