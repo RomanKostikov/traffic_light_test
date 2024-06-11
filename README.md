@@ -64,7 +64,7 @@ Content-Type: application/json
 
 3. Обновление очереди пешеходов для светофора:
 ```
-PUT http://localhost:8000/trafficlights/1/pedestrianQueue?size=5
+PUT http://localhost:8000/trafficlights/2/pedestrianQueue?size=5
 Content-Type: application/json
 
 {
@@ -81,7 +81,7 @@ Content-Type: application/json
   "size": 10
 }
 ```
-Вы также можете использовать другие методы HTTP, такие как DELETE и PATCH, чтобы удалить или частично обновить 
+Вы также можете использовать другие методы HTTP такие, как DELETE и PATCH, чтобы удалить или частично обновить 
 светофоры.
 
 ## Скриншоты
